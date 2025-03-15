@@ -1,0 +1,5 @@
+pandas
+numpy
+seaborn
+-e . # e is editable mode and . is current directory
+
