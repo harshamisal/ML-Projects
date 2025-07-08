@@ -2,7 +2,8 @@ from setuptools import find_packages, setup
 from typing import List
 
 def get_requirements(file_path:str)->List[str]:
-    """This function returns a list of requirements from a given file path."""
+    
+    # This function returns a list of requirements from a given file path
      
     requirements=[]
     HYPHEN_E_DOT='-e.'

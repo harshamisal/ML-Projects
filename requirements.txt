@@ -1,5 +1,9 @@
 pandas
 numpy
 seaborn
--e . # e is editable mode and . is current directory
-
+ipykernel
+scipy
+scikit-learn
+catboost
+xgboost
+# -e . # e is editable mode and . is current directory
