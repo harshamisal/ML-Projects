@@ -13,9 +13,10 @@ logging.basicConfig(
     level=logging.INFO
 )
 
-if __name__=='__main__':
-    logging.info('This is a info message')
-    logging.warning('This is a warning message')
-    logging.error('This is a error message')
-    logging.critical('This is a critical message')
-    logging.debug('This is a debug message')
+
+# if __name__=='__main__':
+#     logging.info('This is a info message')
+#     logging.warning('This is a warning message')
+#     logging.error('This is a error message')
+#     logging.critical('This is a critical message')
+#     logging.debug('This is a debug message')

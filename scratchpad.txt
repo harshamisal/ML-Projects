@@ -35,3 +35,17 @@ files
     ->exception.py
     ->utils.py
 
+python src/components/data_ingestion.py
+or
+python -m src.components.data_ingestion
+
+
+except Exception as e:
+            # exc_type, exc_obj, exc_tb = sys.exc_info()
+            # file_name = exc_tb.tb_frame.f_code.co_filename
+            # line_number = exc_tb.tb_lineno
+
+            # print(f"Error Type   : {exc_type.__name__}")
+            # print(f"Message      : {e}")
+            # print(f"File Name    : {file_name}")
+            # print(f"Line Number  : {line_number}")
