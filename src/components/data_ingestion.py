@@ -1,8 +1,7 @@
 import os
 import sys
-import traceback
 
-# sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../../')))
 
 from src.exception import CustomException
 from src.logger import logging
@@ -13,6 +12,7 @@ from dataclasses import dataclass # to create class variables
 
 from src.components.data_transformation import DataTransformationConfig
 from src.components.data_transformation import DataTransformation
+from src.components.model_trainer import ModelTrainer
 
 @dataclass # 
 class DataIngestionConfig:
@@ -56,5 +56,7 @@ if __name__ == '__main__':
     train_data, test_data = obj.initiate_data_ingestion()
 
     data_transformation = DataTransformation()
-    data_transformation.initiate_data_transformation(train_data, test_data)
+    train_arr, test_arr, preprocessor_obj_file_path = data_transformation.initiate_data_transformation(train_data, test_data)
 
+    model_trainer = ModelTrainer()
+    r2_scr = model_trainer.initiate_model_trainer(train_arr, test_arr)

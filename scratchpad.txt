@@ -40,6 +40,7 @@ or
 python -m src.components.data_ingestion
 
 
+import traceback
 except Exception as e:
             # exc_type, exc_obj, exc_tb = sys.exc_info()
             # file_name = exc_tb.tb_frame.f_code.co_filename
