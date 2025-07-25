@@ -1,3 +1,13 @@
+// {
+//   "python.envFile": "${ML-Projects}/.env"
+// }
+
 {
-  "python.envFile": "${ML-Projects}/.env"
+  "python.testing.pytestArgs": ["."],
+  "python.testing.unittestEnabled": false,
+  "python.testing.pytestEnabled": true,
+  "python.envFile": "${ML-Projects}/.env",
+  "python.env": {
+    "PYDEVD_WARN_EVALUATION_TIMEOUT": "30"
+  }
 }
