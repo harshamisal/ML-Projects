@@ -5,6 +5,7 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../../'
 import numpy as np
 import pandas as pd
 import dill
+import pickle
 
 from src.exception import CustomException
 from src.logger import logging
@@ -17,7 +18,8 @@ def save_object(file_path, obj):
         os.makedirs(dir_path, exist_ok=True)
 
         with open(file_path, 'wb') as file_obj:
-            dill.dump(obj, file_obj)
+            pickle.dump(obj, file_obj)
+            
     except Exception as e:
         raise CustomException(e, SystemError)
     
@@ -51,5 +53,15 @@ def evaluate_model(X_train, y_train, X_test, y_test, models, param):
         return report
     
     except Exception as e:
-        print(e)
-        # raise CustomException(e, sys)
+        raise CustomException(e, sys)
+
+def load_object(file_path):
+    try:
+        if not os.path.exists(file_path):
+            raise FileNotFoundError(f"File not found at: {file_path}")
+        
+        with open(file_path, 'rb') as file_obj:
+            return pickle.load(file_obj)
+        
+    except Exception as e:
+        raise CustomException(e, sys)

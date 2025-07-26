@@ -87,12 +87,12 @@ class ModelTrainer:
                 },
                 'AdaBoost Regressor': {
                     'learning_rate': [.1, .01, 0.5, .001],
-#                     Valid: 'linear', 'square', 'exponential' ✅
+                    #                     Valid: 'linear', 'square', 'exponential' ✅
 
-# But ensure your base model supports that loss.
+                    # But ensure your base model supports that loss.
 
-# Also, AdaBoostRegressor by default uses DecisionTreeRegressor, which does not support all loss values depending on version.
-#                     # 'loss': ['linear', 'square', 'exponential'],
+                    # Also, AdaBoostRegressor by default uses DecisionTreeRegressor, which does not support all loss values depending on version.
+                    #                     # 'loss': ['linear', 'square', 'exponential'],
                     'loss': ['linear', 'square'],
                     'n_estimators': [8, 16, 32, 64, 128, 256]
                 }
