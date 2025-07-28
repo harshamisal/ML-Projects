@@ -50,3 +50,5 @@ except Exception as e:
             # print(f"Message      : {e}")
             # print(f"File Name    : {file_name}")
             # print(f"Line Number  : {line_number}")
+
+http://127.0.0.1:5000/predictdata
